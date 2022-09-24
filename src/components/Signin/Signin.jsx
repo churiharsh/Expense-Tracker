@@ -1,7 +1,8 @@
 import React from "react";
 import "./Signin.css"
 import {GoogleLogin} from 'react-google-login';
-import { gapi } from 'gapi-script';
+import  {useState} from "react";
+
 const clientId='949936098006-hblta500v948358n1htrm7qnvlcaf49k.apps.googleusercontent.com';
 
 
@@ -9,16 +10,7 @@ const clientId='949936098006-hblta500v948358n1htrm7qnvlcaf49k.apps.googleusercon
 // check
 
 function Signin(){
-    useEffect(()=>{
-        const initClient=()=>{
-          gapi.client.init({
-            clientId:clientId,
-            scope:''
-          })
-        };
-        gapi.load('client:auth2',initClient)
-      
-      });
+   
     setTimeout(SI, 10)
 
     function SI(){
@@ -43,13 +35,13 @@ function Signin(){
     sign_in_btn2.addEventListener("click", () => {
         container.classList.remove("sign-up-mode2");
     });
-    const onSuccess=()=>{
-        console.log('success',res);
-    };
-    const onFailure=(err)=>{
-        console.log('failed',err);
-    }
-    }
+}
+const onSuccess=(res)=>{
+    console.log('success',res);
+};
+const onFailure=(err)=>{
+    console.log('failed',err);
+}
 
     return(
         <>
@@ -68,7 +60,7 @@ function Signin(){
                 <input type="submit" value="Login" className="btn"/>
                 <p className="social-text">Or Sign in with social platform</p>
                 <div className="social-media">
-                    <a href="#" className="social-icon">
+                    {/* <a href="#" className="social-icon">
                         <i className="fab fa-facebook"></i>
                     </a>
                     <a href="" className="social-icon">
@@ -79,7 +71,16 @@ function Signin(){
                     </a>
                     <a href="" className="social-icon">
                         <i className="fab fa-linkedin-in"></i>
-                    </a>
+                    </a> */}
+                    <GoogleLogin
+                    clientId={clientId}
+                    buttonText="Google"
+                    onSuccess={onSuccess}
+                    onFailure={onFailure}
+                    cookiePolicy={'single_host_origin'}
+                    isSignedIn={true}
+                    />
+
                 </div>
                 <p className="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a></p>
             </form>
@@ -100,7 +101,7 @@ function Signin(){
                 <input type="submit" value="Sign up" className="btn"/>
                 <p className="social-text">Or Sign in with social platform</p>
                 <div className="social-media">
-                    <a href="#" className="social-icon">
+                    {/* <a href="#" className="social-icon">
                         <i className="fab fa-facebook"></i>
                     </a>
                     <a href="" className="social-icon">
@@ -111,7 +112,15 @@ function Signin(){
                     </a>
                     <a href="" className="social-icon">
                         <i className="fab fa-linkedin-in"></i>
-                    </a>
+                    </a> */}
+                    <GoogleLogin
+                    clientId={clientId}
+                    buttonText="Google"
+                    onSuccess={onSuccess}
+                    onFailure={onFailure}
+                    cookiePolicy={'single_host_origin'}
+                    isSignedIn={true}
+                    />
                 </div>
                 <p className="account-text">Already have an account? <a href="#" id="sign-in-btn2">Sign in</a></p>
             </form>
