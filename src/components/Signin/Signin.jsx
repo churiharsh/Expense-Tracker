@@ -2,11 +2,14 @@ import React from "react";
 import "./Signin.css"
 import {GoogleLogin} from 'react-google-login';
 import  {useState} from "react";
+// import { Link } from "react-router-dom";
+import {BrowserRouter as Router , Link} from 'react-router-dom';
+// import bcrypt from 'bcryptjs'
 
-const clientId='949936098006-hblta500v948358n1htrm7qnvlcaf49k.apps.googleusercontent.com';
+ const clientId='949936098006-hblta500v948358n1htrm7qnvlcaf49k.apps.googleusercontent.com';
 
 
-
+// Adder
 // check
 
 function Signin(){
@@ -16,8 +19,8 @@ function Signin(){
     function SI(){
 
         const sign_in_btn = document.querySelector("#sign-in-btn");
-    const sign_up_btn = document.querySelector("#sign-up-btn");
-    const container = document.querySelector(".container");
+        const sign_up_btn = document.querySelector("#sign-up-btn");
+        const container = document.querySelector(".container");
     const sign_in_btn2 = document.querySelector("#sign-in-btn2");
     const sign_up_btn2 = document.querySelector("#sign-up-btn2");
     
@@ -43,21 +46,27 @@ const onFailure=(err)=>{
     console.log('failed',err);
 }
 
+
+
     return(
         <>
+        <Router>
             <div className="container">
         <div className="signin-signup">
             <form action="" className="sign-in-form">
                 <h2 className="title">Sign in</h2>
                 <div className="input-field">
                     <i className="fas fa-user"></i>
-                    <input type="text" placeholder="Username"/>
+                    <input type="text" placeholder="Username" name="name"/>
                 </div>
                 <div className="input-field">
                     <i className="fas fa-lock"></i>
-                    <input type="password" placeholder="Password"/>
+                    <input type="password" placeholder="Password" name="password"/>
                 </div>
+                <Link to='/dashboard'>
+                
                 <input type="submit" value="Login" className="btn"/>
+                </Link>
                 <p className="social-text">Or Sign in with social platform</p>
                 <div className="social-media">
                     {/* <a href="#" className="social-icon">
@@ -72,14 +81,14 @@ const onFailure=(err)=>{
                     <a href="" className="social-icon">
                         <i className="fab fa-linkedin-in"></i>
                     </a> */}
-                    <GoogleLogin
+                    {/* <GoogleLogin
                     clientId={clientId}
                     buttonText="Google"
                     onSuccess={onSuccess}
                     onFailure={onFailure}
                     cookiePolicy={'single_host_origin'}
                     isSignedIn={true}
-                    />
+                    /> */}
 
                 </div>
                 <p className="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a></p>
@@ -88,15 +97,15 @@ const onFailure=(err)=>{
                 <h2 className="title">Sign up</h2>
                 <div className="input-field">
                     <i className="fas fa-user"></i>
-                    <input type="text" placeholder="Username"/>
+                    <input type="text" placeholder="Username" name="name"/>
                 </div>
                 <div className="input-field">
                     <i className="fas fa-envelope"></i>
-                    <input type="text" placeholder="Email"/>
+                    <input type="text" placeholder="Email" name="email"/>
                 </div>
                 <div className="input-field">
                     <i className="fas fa-lock"></i>
-                    <input type="password" placeholder="Password"/>
+                    <input type="password" placeholder="Password" name="password"/>
                 </div>
                 <input type="submit" value="Sign up" className="btn"/>
                 <p className="social-text">Or Sign in with social platform</p>
@@ -144,6 +153,7 @@ const onFailure=(err)=>{
             </div>
         </div>
     </div>
+    </Router>
         </>
     )
 
