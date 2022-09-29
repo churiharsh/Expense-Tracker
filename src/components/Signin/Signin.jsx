@@ -12,7 +12,7 @@ import {BrowserRouter as Router , Link} from 'react-router-dom';
 // Adder
 // check
 
-function Signin(){
+const Signin=()=>{
    
     setTimeout(SI, 10)
 
