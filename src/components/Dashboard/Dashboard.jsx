@@ -4,25 +4,25 @@ const Dashboard=()=>{
 
 return(
 <>
-<div class="app">
-	<header class="app-header">
-		<div class="app-header-logo">
-			<div class="logo">
-				<span class="logo-icon">
+<div className="app">
+	<header className="app-header">
+		<div className="app-header-logo">
+			<div className="logo">
+				<span className="logo-icon">
 					<img src="https://assets.codepen.io/285131/almeria-logo.svg" />
 				</span>
-				<h1 class="logo-title">
+				<h1 className="logo-title">
 					<span>Almeria</span>
 					<span>NeoBank</span>
 				</h1>
 			</div>
 		</div>
-		<div class="app-header-navigation">
-			<div class="tabs">
+		<div className="app-header-navigation">
+			<div className="tabs">
 				<a href="#">
 					Overview
 				</a>
-				<a href="#" class="active">
+				<a href="#" className="active">
 					Payments
 				</a>
 				<a href="#">
@@ -39,58 +39,58 @@ return(
 				</a>
 			</div>
 		</div>
-		<div class="app-header-actions">
-			<button class="user-profile">
+		<div className="app-header-actions">
+			<button className="user-profile">
 				<span>Matheo Peterson</span>
 				<span>
 					<img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" />
 				</span>
 			</button>
-			<div class="app-header-actions-buttons">
-				<button class="icon-button large">
-					<i class="ph-magnifying-glass"></i>
+			<div className="app-header-actions-buttons">
+				<button className="icon-button large">
+					<i className="ph-magnifying-glass"></i>
 				</button>
-				<button class="icon-button large">
-					<i class="ph-bell"></i>
+				<button className="icon-button large">
+					<i className="ph-bell"></i>
 				</button>
 			</div>
 		</div>
-		<div class="app-header-mobile">
-			<button class="icon-button large">
-				<i class="ph-list"></i>
+		<div className="app-header-mobile">
+			<button className="icon-button large">
+				<i className="ph-list"></i>
 			</button>
 		</div>
 
 	</header>
-	<div class="app-body">
-		<div class="app-body-navigation">
-			<nav class="navigation">
+	<div className="app-body">
+		<div className="app-body-navigation">
+			<nav className="navigation">
 				<a href="#">
-					<i class="ph-browsers"></i>
+					<i className="ph-browsers"></i>
 					<span>Dashboard</span>
 				</a>
 				<a href="#">
-					<i class="ph-check-square"></i>
+					<i className="ph-check-square"></i>
 					<span>Scheduled</span>
 				</a>
 				<a href="#">
-					<i class="ph-swap"></i>
+					<i className="ph-swap"></i>
 					<span>Transfers</span>
 				</a>
 				<a href="#">
-					<i class="ph-file-text"></i>
+					<i className="ph-file-text"></i>
 					<span>Templates</span>
 				</a>
 				<a href="#">
-					<i class="ph-globe"></i>
+					<i className="ph-globe"></i>
 					<span>SWIFT</span>
 				</a>
 				<a href="#">
-					<i class="ph-clipboard-text"></i>
+					<i className="ph-clipboard-text"></i>
 					<span>Exchange</span>
 				</a>
 			</nav>
-			<footer class="footer">
+			<footer className="footer">
 				<h1>Almeria<small>©</small></h1>
 				<div>
 					Almeria ©<br />
@@ -98,34 +98,34 @@ return(
 				</div>
 			</footer>
 		</div>
-		<div class="app-body-main-content">
-			<section class="service-section">
+		<div className="app-body-main-content">
+			<section className="service-section">
 				<h2>Service</h2>
-				<div class="service-section-header">
-					<div class="search-field">
-						<i class="ph-magnifying-glass"></i>
+				<div className="service-section-header">
+					<div className="search-field">
+						<i className="ph-magnifying-glass"></i>
 						<input type="text" placeholder="Account number"/>
 					</div>
-					<div class="dropdown-field">
+					<div className="dropdown-field">
 						<select>
 							<option>Home</option>
 							<option>Work</option>
 						</select>
-						<i class="ph-caret-down"></i>
+						<i className="ph-caret-down"></i>
 					</div>
-					<button class="flat-button">
+					<button className="flat-button">
 						Search
 					</button>
 				</div>
-				<div class="mobile-only">
-					<button class="flat-button">
+				<div className="mobile-only">
+					<button className="flat-button">
 						Toggle search
 					</button>
 				</div>
-				<div class="tiles">
-					<article class="tile">
-						<div class="tile-header">
-							<i class="ph-lightning-light"></i>
+				<div className="tiles">
+					<article className="tile">
+						<div className="tile-header">
+							<i className="ph-lightning-light"></i>
 							<h3>
 								<span>Electricity</span>
 								<span>UrkEnergo LTD.</span>
@@ -133,14 +133,14 @@ return(
 						</div>
 						<a href="#">
 							<span>Go to service</span>
-							<span class="icon-button">
-								<i class="ph-caret-right-bold"></i>
+							<span className="icon-button">
+								<i className="ph-caret-right-bold"></i>
 							</span>
 						</a>
 					</article>
-					<article class="tile">
-						<div class="tile-header">
-							<i class="ph-fire-simple-light"></i>
+					<article className="tile">
+						<div className="tile-header">
+							<i className="ph-fire-simple-light"></i>
 							<h3>
 								<span>Heating Gas</span>
 								<span>Gazprom UA</span>
@@ -148,14 +148,14 @@ return(
 						</div>
 						<a href="#">
 							<span>Go to service</span>
-							<span class="icon-button">
-								<i class="ph-caret-right-bold"></i>
+							<span className="icon-button">
+								<i className="ph-caret-right-bold"></i>
 							</span>
 						</a>
 					</article>
-					<article class="tile">
-						<div class="tile-header">
-							<i class="ph-file-light"></i>
+					<article className="tile">
+						<div className="tile-header">
+							<i className="ph-file-light"></i>
 							<h3>
 								<span>Tax online</span>
 								<span>Kharkov 62 str.</span>
@@ -163,35 +163,35 @@ return(
 						</div>
 						<a href="#">
 							<span>Go to service</span>
-							<span class="icon-button">
-								<i class="ph-caret-right-bold"></i>
+							<span className="icon-button">
+								<i className="ph-caret-right-bold"></i>
 							</span>
 						</a>
 					</article>
 				</div>
-				<div class="service-section-footer">
+				<div className="service-section-footer">
 					<p>Services are paid according to the current state of the currency and tariff.</p>
 				</div>
 			</section>
-			<section class="transfer-section">
-				<div class="transfer-section-header">
+			<section className="transfer-section">
+				<div className="transfer-section-header">
 					<h2>Latest transfers</h2>
-					<div class="filter-options">
+					<div className="filter-options">
 						<p>Filter selected: more than 100 $</p>
-						<button class="icon-button">
-							<i class="ph-funnel"></i>
+						<button className="icon-button">
+							<i className="ph-funnel"></i>
 						</button>
-						<button class="icon-button">
-							<i class="ph-plus"></i>
+						<button className="icon-button">
+							<i className="ph-plus"></i>
 						</button>
 					</div>
 				</div>
-				<div class="transfers">
-					<div class="transfer">
-						<div class="transfer-logo">
+				<div className="transfers">
+					<div className="transfer">
+						<div className="transfer-logo">
 							<img src="https://assets.codepen.io/285131/apple.svg" />
 						</div>
-						<dl class="transfer-details">
+						<dl className="transfer-details">
 							<div>
 								<dt>Apple Inc.</dt>
 								<dd>Apple ID Payment</dd>
@@ -205,15 +205,15 @@ return(
 								<dd>Date payment</dd>
 							</div>
 						</dl>
-						<div class="transfer-number">
+						<div className="transfer-number">
 							- $ 550
 						</div>
 					</div>
-					<div class="transfer">
-						<div class="transfer-logo">
+					<div className="transfer">
+						<div className="transfer-logo">
 							<img src="https://assets.codepen.io/285131/pinterest.svg" />
 						</div>
-						<dl class="transfer-details">
+						<dl className="transfer-details">
 							<div>
 								<dt>Pinterest</dt>
 								<dd>2 year subscription</dd>
@@ -227,15 +227,15 @@ return(
 								<dd>Date payment</dd>
 							</div>
 						</dl>
-						<div class="transfer-number">
+						<div className="transfer-number">
 							- $ 120
 						</div>
 					</div>
-					<div class="transfer">
-						<div class="transfer-logo">
+					<div className="transfer">
+						<div className="transfer-logo">
 							<img src="https://assets.codepen.io/285131/warner-bros.svg" />
 						</div>
-						<dl class="transfer-details">
+						<dl className="transfer-details">
 							<div>
 								<dt>Warner Bros.</dt>
 								<dd>Cinema</dd>
@@ -249,20 +249,20 @@ return(
 								<dd>Date payment</dd>
 							</div>
 						</dl>
-						<div class="transfer-number">
+						<div className="transfer-number">
 							- $ 70
 						</div>
 					</div>
 				</div>
 			</section>
 		</div>
-		<div class="app-body-sidebar">
-			<section class="payment-section">
+		<div className="app-body-sidebar">
+			<section className="payment-section">
 				<h2>New Payment</h2>
-				<div class="payment-section-header">
+				<div className="payment-section-header">
 					<p>Choose a card to transfer money</p>
 					<div>
-						<button class="card-button mastercard">
+						<button className="card-button mastercard">
 							<svg width="2001" height="1237" viewBox="0 0 2001 1237" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g id="a624784f2834e21c94a1c0c9a58bbbaa">
 									<path id="7869b07bea546aa59a5ee138adbcfd5a" d="M1270.57 1104.15H729.71V132.15H1270.58L1270.57 1104.15Z" fill="currentColor"></path>
@@ -271,7 +271,7 @@ return(
 								</g>
 							</svg>
 						</button>
-						<button class="card-button visa active">
+						<button className="card-button visa active">
 							<svg xmlns="http://www.w3.org/2000/svg" width="2500" height="2500" viewBox="0 0 141.732 141.732">
 								<g fill="currentColor">
 									<path d="M62.935 89.571h-9.733l6.083-37.384h9.734zM45.014 52.187L35.735 77.9l-1.098-5.537.001.002-3.275-16.812s-.396-3.366-4.617-3.366h-15.34l-.18.633s4.691.976 10.181 4.273l8.456 32.479h10.141l15.485-37.385H45.014zM121.569 89.571h8.937l-7.792-37.385h-7.824c-3.613 0-4.493 2.786-4.493 2.786L95.881 89.571h10.146l2.029-5.553h12.373l1.14 5.553zm-10.71-13.224l5.114-13.99 2.877 13.99h-7.991zM96.642 61.177l1.389-8.028s-4.286-1.63-8.754-1.63c-4.83 0-16.3 2.111-16.3 12.376 0 9.658 13.462 9.778 13.462 14.851s-12.075 4.164-16.06.965l-1.447 8.394s4.346 2.111 10.986 2.111c6.642 0 16.662-3.439 16.662-12.799 0-9.72-13.583-10.625-13.583-14.851.001-4.227 9.48-3.684 13.645-1.389z" />
@@ -282,72 +282,72 @@ return(
 						</button>
 					</div>
 				</div>
-				<div class="payments">
-					<div class="payment">
-						<div class="card green">
+				<div className="payments">
+					<div className="payment">
+						<div className="card green">
 							<span>01/22</span>
 							<span>
 								•••• 4012
 							</span>
 						</div>
-						<div class="payment-details">
+						<div className="payment-details">
 							<h3>Internet</h3>
 							<div>
 								<span>$ 2,110</span>
-								<button class="icon-button">
-									<i class="ph-caret-right-bold"></i>
+								<button className="icon-button">
+									<i className="ph-caret-right-bold"></i>
 								</button>
 							</div>
 						</div>
 					</div>
-					<div class="payment">
-						<div class="card olive">
+					<div className="payment">
+						<div className="card olive">
 							<span>12/23</span>
 							<span>
 								•••• 2228
 							</span>
 						</div>
-						<div class="payment-details">
+						<div className="payment-details">
 							<h3>Universal</h3>
 							<div>
 								<span>$ 5,621</span>
-								<button class="icon-button">
-									<i class="ph-caret-right-bold"></i>
+								<button className="icon-button">
+									<i className="ph-caret-right-bold"></i>
 								</button>
 							</div>
 						</div>
 					</div>
-					<div class="payment">
-						<div class="card gray">
+					<div className="payment">
+						<div className="card gray">
 							<span>03/22</span>
 							<span>
 								•••• 5214
 							</span>
 						</div>
-						<div class="payment-details">
+						<div className="payment-details">
 							<h3>Gold</h3>
 							<div>
 								<span>$ 3,473</span>
-								<button class="icon-button">
-									<i class="ph-caret-right-bold"></i>
+								<button className="icon-button">
+									<i className="ph-caret-right-bold"></i>
 								</button>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="faq">
+				<div className="faq">
 					<p>Most frequently asked questions</p>
 					<div>
 						<label>Question</label>
 						<input type="text" placeholder="Type here"/>
 					</div>
 				</div>
-				<div class="payment-section-footer">
-					<button class="save-button">
+				<div className="payment-section-footer">
+					<button className="save-button">
 						Save
 					</button>
-					<button class="settings-button">
-						<i class="ph-gear"></i>
+					<button className="settings-button">
+						<i className="ph-gear"></i>
 						<span>More settings</span>
 					</button>
 				</div>

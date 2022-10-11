@@ -6,7 +6,7 @@ import  {useState} from "react";
 import {BrowserRouter as Router , Link} from 'react-router-dom';
 // import bcrypt from 'bcryptjs'
 
- const clientId='949936098006-hblta500v948358n1htrm7qnvlcaf49k.apps.googleusercontent.com';
+ const clientId='1066255000490-mo0u37mb6patetftglgbgfj0h6sfj7hs.apps.googleusercontent.com';
 
 
 // Adder
@@ -50,11 +50,13 @@ const onFailure=(err)=>{
 
     return(
         <>
-        <Router>
             <div className="container">
         <div className="signin-signup">
             <form action="" className="sign-in-form">
+                <Link to ='/dashboard'>
+
                 <h2 className="title">Sign in</h2>
+                </Link>
                 <div className="input-field">
                     <i className="fas fa-user"></i>
                     <input type="text" placeholder="Username" name="name"/>
@@ -63,11 +65,12 @@ const onFailure=(err)=>{
                     <i className="fas fa-lock"></i>
                     <input type="password" placeholder="Password" name="password"/>
                 </div>
-                <Link to='/dashboard'>
                 
-                <input type="submit" value="Login" className="btn"/>
+                <Link to='/dashboard'>
+                <input type="button" value="Login" className="btn"/>
+               
                 </Link>
-                <p className="social-text">Or Sign in with social platform</p>
+                {/* <p className="social-text">Or Sign in with social platform</p> */}
                 <div className="social-media">
                     {/* <a href="#" className="social-icon">
                         <i className="fab fa-facebook"></i>
@@ -153,12 +156,29 @@ const onFailure=(err)=>{
             </div>
         </div>
     </div>
-    </Router>
         </>
     )
 
 
 
+
+
+
+}
+
+const Name =()=>{
+    let [Username,setUsername] = useState({
+        uname:'',
+        lname:''
+    })
+    let [Email,setEmail] = useState({
+        femail:'',
+        lemail:''
+    })
+    let [Password,setPassword] = useState({
+        fpass:'',
+        lpass:''
+    })
 
 
 
